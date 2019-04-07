@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}  
+
+.search{
+    margin-left:10px;
+}
+
+.reportbody{
+    background-color:#eee;
+    margin:10px;
+}
+

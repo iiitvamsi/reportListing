@@ -1,0 +1,46 @@
+
+
+
+  <form> 
+    <div class="container">
+      <div class="col-xs-6 col-md-6 col-sm-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+          <div class="input-group-btn">
+            <button class="btn btn-primary search" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+<div class="reportbody" *ngFor ="let report of reportData">
+  <!-- <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <td><img src="{{report.image}}" height="200" width="200"></td>
+      </tr>
+      
+        <tr><td>{{report.title}}</td></tr>
+        <tr><td>{{report.shortdesc}}</td></tr>
+        <tr><td>{{report.cost}}</td></tr>
+        <tr><td>{{report.publisheddate}}</td></tr>
+    </tbody>
+  </table> -->
+  <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <tr>
+                <td><img src="{{report.image}}" width="200" height="200" style="margin:50px;"></td>
+            </tr>
+        </div>
+        <div class="col-sm">
+            <tr><td>{{report.title}}</td></tr>
+            <tr><td>{{report.shortdesc}}</td></tr>
+            <tr><td>{{report.cost}}</td></tr>
+            <tr><td>{{report.publisheddate}}</td></tr>
+        </div>
+      </div>
+    </div>
+
+</div>
