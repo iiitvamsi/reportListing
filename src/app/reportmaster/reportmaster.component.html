@@ -9,10 +9,19 @@
           <div class="input-group-btn">
             <button class="btn btn-primary search" (click)="search()" type="submit">Search</button>
           </div>
+
+        
         </div>
       </div>
     </div>
   </form>
+
+  <div class="container con">
+  <div class="input-group-btn">
+    <button class="btn btn-primary" (click)="sortByDate()" type="submit">Sort By Date</button>&nbsp;
+    <button class="btn btn-primary" (click)="sortByPrice()" type="submit">Sort By Price</button>
+  </div>
+</div>
 
 <div class="reportbody" *ngFor ="let report of reportData">
   <div class="container">
@@ -32,3 +41,6 @@
       </div>
     </div>
 </div>
+
+
+

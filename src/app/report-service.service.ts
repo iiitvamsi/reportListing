@@ -23,5 +23,21 @@ export class ReportService {
     }))
   }
 
+  sortByDate(){
+      console.log("date");
+      let url = "http://5ca8d03ac91d3d0014d7cfb4.mockapi.io/api/reportListing/reports/?sortBy=publisheddate&order=desc";
+      return this.http.get(url).pipe(map(data=>{
+        console.log(data);
+        return data;
+      }))
+  }
+
+  sortByCost(){
+    let url = "http://5ca8d03ac91d3d0014d7cfb4.mockapi.io/api/reportListing/reports/?sortBy=cost&order=desc";
+      return this.http.get(url).pipe(map(data=>{
+        return data;
+      }))
+  }
+
 
 }

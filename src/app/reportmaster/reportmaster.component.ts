@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportmasterComponent implements OnInit {
 
-  reportData:any;
+  reportData:any = [];
   searchValue:string;
+
 
   constructor(private reportservice:ReportService) { }
 
@@ -29,7 +30,18 @@ export class ReportmasterComponent implements OnInit {
     const inputValue = event.target.value;
     this.reportservice.searchData(inputValue).subscribe(data=>{
           this.reportData = data;
-          console.log(this.reportData);
+    })
+  }
+
+  sortByDate(){
+    this.reportservice.sortByDate().subscribe(data=>{
+      this.reportData = data;
+    })
+  }
+
+  sortByPrice(){
+    this.reportservice.sortByCost().subscribe(data=>{
+      this.reportData = data;
     })
   }
 
