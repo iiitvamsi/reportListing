@@ -1,4 +1,4 @@
-.container{
+.con{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +11,10 @@
 
 .reportbody{
     background-color:#eee;
-    margin:10px;
+    margin:30px;
 }
 
+tr,td{
+    padding:10px;
+    font-family:sans-serif;
+}

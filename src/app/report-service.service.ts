@@ -10,9 +10,18 @@ export class ReportService {
   constructor(private http:HttpClient) { }
 
   getReportData(){
-    let url = "http://5ca8d03ac91d3d0014d7cfb4.mockapi.io/api/reportListing/reports";
+    let url = "http://5ca8d03ac91d3d0014d7cfb4.mockapi.io/api/reportListing/reports/";
     return this.http.get(url).pipe(map(data=>{
       return data;
     }))
   }
+
+  searchData(searchValue){
+    let url = "http://5ca8d03ac91d3d0014d7cfb4.mockapi.io/api/reportListing/reports/?search="+searchValue;
+    return this.http.get(url).pipe(map(data=>{
+      return data;
+    }))
+  }
+
+
 }
